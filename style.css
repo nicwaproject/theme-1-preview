@@ -139,34 +139,83 @@ nav ul li a:hover {
 }
 /* .......SECTION 1........... */
 
+
 #section1 {
+    position: relative;
     background-image: url('cover2.jpeg'); /* Desktop background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
-    height:100vh;
-    padding-top: 40px;
+    height: 90vh;
+    padding: 0;
+    overflow: hidden;
 }
 
-.couple-name {
-    font-size: 6em;
-    color: white;
+#section1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Gelap transparan */
+    z-index: 1; /* Tetap di atas background */
+}
+
+#lottie-animation {
+    position: absolute;
+    top: 0; /* Letakkan di bagian atas */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Sesuaikan ukuran */
+    height: auto; /* Sesuaikan ukuran */
+    z-index: 99; /* Pastikan di atas elemen lain */
+}
+
+.text-container {
+    position: relative; /* Pastikan teks tetap di atas */
+    z-index: 2; /* Menjadikan teks lebih di atas dibanding gambar */
     margin: 20px;
-    padding: 20px;
-    font-family: "Updock", cursive;
-    font-weight: 400;
-    font-style: normal;
-    padding-bottom:30px;
+    padding: 4px 20px;
     border-radius: 10px; /* Add border radius */
     background-color: rgba(126, 127, 82, 0.2);
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
 }
 
+.couple-name {
+    font-size: 4em;
+    color: white;
+    font-family: "Updock", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.date-section1 {
+    margin: 0;
+    padding: 0;
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.decoration {
+    position: absolute;
+    bottom: 0; /* Posisikan di bawah */
+    left: 50%;
+    transform: translateX(-50%); /* Pusatkan */
+    width: 100%; /* Atur ukuran */
+    opacity: 0.8;
+    z-index: 1; /* Pastikan gambar di bawah teks */
+}
 /* ..........SECTION 2......... */
 #section2 {
     background-color: #44442C; /* Change background color if needed */
