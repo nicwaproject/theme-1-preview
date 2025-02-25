@@ -13,6 +13,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const guestName = getQueryParameter('guest');
     document.getElementById('guestName').textContent = guestName || 'Guest';
 
+    //Lottie Files
+    lottie.loadAnimation({
+        container: document.getElementById("lottie-animation"), // Target elemen
+        renderer: "svg", // Bisa juga "canvas" atau "html"
+        loop: true, // Animasi akan terus berulang
+        autoplay: true, // Mulai otomatis
+        path: "snow2.json" // Ganti dengan path file Lottie kamu
+    });
+
     // Variables for the invitation and music
     const openButton = document.getElementById('openButton');
     const invitationCover = document.getElementById('invitationCover');
