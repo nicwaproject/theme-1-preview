@@ -22,6 +22,22 @@ document.addEventListener("DOMContentLoaded", function() {
         path: "snow2.json" // Ganti dengan path file Lottie kamu
     });
 
+    lottie.loadAnimation({
+        container: document.getElementById("birds-animation"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "birds.json" // Ganti dengan path file JSON animasi burung kamu
+    });
+
+    lottie.loadAnimation({
+        container: document.getElementById("dot-animation"), // Target elemen
+        renderer: "svg", // Bisa juga "canvas" atau "html"
+        loop: true, // Animasi akan terus berulang
+        autoplay: true, // Mulai otomatis
+        path: "white-dot.json" // Ganti dengan path file Lottie kamu
+    });
+
     // Variables for the invitation and music
     const openButton = document.getElementById('openButton');
     const invitationCover = document.getElementById('invitationCover');
