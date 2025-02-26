@@ -189,7 +189,7 @@ nav ul li a:hover {
 }
 
 .couple-name {
-    font-size: 4em;
+    font-size: 3em;
     color: white;
     font-family: "Updock", cursive;
     font-weight: 400;
@@ -930,12 +930,9 @@ footer {
     /* SECTION1 */
     #section1 {
         background-image: url('section1.jpeg'); /* Mobile background image */
-        align-items: flex-start;
     }
     .couple-name {
-        font-size: 5em;
-        margin: 5px 5px 5px 5px;
-        padding: 10px;
+        font-size: 3em;
     }
     /* SECTION 2 */
     #section2 .quran-verse {
