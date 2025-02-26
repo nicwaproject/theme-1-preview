@@ -139,7 +139,6 @@ nav ul li a:hover {
 }
 /* .......SECTION 1........... */
 
-
 #section1 {
     position: relative;
     background-image: url('cover2.jpeg'); /* Desktop background image */
@@ -216,13 +215,15 @@ nav ul li a:hover {
     opacity: 0.8;
     z-index: 1; /* Pastikan gambar di bawah teks */
 }
+
+
 /* ..........SECTION 2......... */
 #section2 {
     background-color: #44442C; /* Change background color if needed */
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Align items to the top */
-    flex-direction:row;
+    align-items: center; /* Align items to the top */
     padding: 20px;
     color:white;
     position: relative; /* Add relative positioning to section */
@@ -253,10 +254,7 @@ nav ul li a:hover {
     margin-top: 10px;
 }
 
-/*.............. SECTION 3.............. */
-#section3 {
-    background-color: #44442C; /* Change this to the path of your background image */
-}
+/*.............. COUNTDOWN.............. */
 
 #countdown {
     display: flex;
@@ -288,6 +286,17 @@ nav ul li a:hover {
 .label {
     font-size: 18px;
     color: white; /* Label color */
+}
+
+#birds-animation {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    z-index: 1;
 }
 
 /* .............section 4 profile........... */
@@ -360,7 +369,7 @@ nav ul li a:hover {
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    padding: 10px;
+    padding: 50px 10px;
     background-color: #44442C;
     color:white;
     position: relative;
@@ -378,6 +387,7 @@ nav ul li a:hover {
 }
 
 .event {
+    position: relative;
     flex: 1;
     margin-top: 20px;
     text-align: center;
@@ -434,6 +444,17 @@ nav ul li a:hover {
     color: black;
 }
 
+#dot-animation {
+    position: absolute;
+    top: 20%; /* Letakkan di bagian atas */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Sesuaikan ukuran */
+    height: auto; /* Sesuaikan ukuran */
+    z-index: 99; /* Pastikan di atas elemen lain */
+    opacity: 30%;
+}
+
 /* .........SECTION 6 GALLERY............ */
 
 #section6 {
@@ -470,6 +491,7 @@ nav ul li a:hover {
     text-align: center;
     padding: 0;
     margin: 0;
+    height: 100vh;
 }
 
 #section7 h2 {
@@ -575,7 +597,6 @@ nav ul li a:hover {
     font-size: 16px; /* Ganti dengan ukuran font yang diinginkan */
     color: #333; /* Ganti dengan warna yang diinginkan */
 }
-
 
 /* ...........SECTION 8............. */
 #section8 {
@@ -918,14 +939,20 @@ footer {
         font-size: 1em;
         padding: 8px 16px;
     }
+    /* .........FLOWER CONTROL......... */
+
+    .flowers1 {
+        width: 110px; /* Adjust size as needed */
+    }
+    .flowers2 {
+        width: 110px; /* Adjust size as needed */
+    }
 
     /* SECTION1 */
     #section1 {
         background-image: url('section1.jpeg'); /* Mobile background image */
     }
-    .couple-name {
-        font-size: 4em;
-    }
+
     /* SECTION 2 */
     #section2 .quran-verse {
         max-width: 350px;
