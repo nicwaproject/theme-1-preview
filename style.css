@@ -1,5 +1,13 @@
+:root {
+    --primary-color: #44442C;
+    --secondary-color: #D1DCD8;
+    --third-color: #7E7F52;
+    --primary-font: "Updock", cursive;
+    --secondary-font: "Old Standard TT", serif;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: var(--secondary-font);
     margin: 0;
 }
 
@@ -44,7 +52,7 @@ body {
 .couple {
     font-size: 4em;
     font-weight: bold;
-    font-family: "Updock", cursive;
+    font-family: var(--primary-font);
     font-weight: 400;
     font-style: normal;
 }
@@ -65,17 +73,17 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     color: white;
-    background-color: #7E7F52;
+    background-color: var(--third-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: "Old Standard TT", serif;
+    font-family: var(--secondary-font);
     font-weight: 400;
     font-style: normal;
 }
 
 #openButton:hover {
-    background-color: #D1DCD8;
+    background-color: var(--secondary-color);
     color: black;
 }
 
@@ -85,7 +93,7 @@ nav {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #7E7F52;
+    background-color: var(--third-color);
     z-index: 999;
 }
 
@@ -114,13 +122,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #f2f2f2; /* Warna teks saat hover */
+    color: var(--secondary-color); /* Warna teks saat hover */
 }
 
 
 /* ................................SECTION........................ */
 .section {
-    font-family: "Old Standard TT", serif;
+    font-family: var(--secondary-font);
     font-weight: 400;
     font-style: normal;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -129,7 +137,7 @@ nav ul li a:hover {
     margin: 0;
 }
 .section h2 {
-    font-family: "Updock", cursive;
+    font-family: var(--primary-font);
     font-weight: 400;
     font-style: normal;
     font-size: 3.8em;
@@ -190,7 +198,7 @@ nav ul li a:hover {
 .couple-name {
     font-size: 4em;
     color: white;
-    font-family: "Updock", cursive;
+    font-family: var(--primary-font);
     font-weight: 400;
     font-style: normal;
     margin: 0;
@@ -200,7 +208,7 @@ nav ul li a:hover {
 .date-section1 {
     margin: 0;
     padding: 0;
-    font-family: "Old Standard TT", serif;
+    font-family: var(--secondary-font);
     font-weight: 400;
     font-style: normal;
     color: white;
@@ -219,7 +227,7 @@ nav ul li a:hover {
 
 /* ..........SECTION 2......... */
 #section2 {
-    background-color: #44442C; /* Change background color if needed */
+    background-color: var(--primary-color); /* Change background color if needed */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -318,16 +326,39 @@ nav ul li a:hover {
 }
 
 .profile {
+    position: relative;
     margin: 40px;
     text-align: center;
     min-width: 350px;
 }
 
-.profile img {
-    width: 300px; /* Adjust image width as needed */
-    height: 300px; /* Adjust image height as needed */
-    border-radius: 50%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+.flower-bg1, .flower-bg2 {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; /* Sesuaikan dengan ukuran profil */
+    height: auto;
+    z-index: 1; /* Pastikan ada di belakang foto */
+}
+
+.flower-bg1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flower-bg2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+.profile-img {
+    position: relative;
+    width: 250px; /* Sesuaikan ukuran foto */
+    height: auto;
     object-fit: cover; 
 }
 
@@ -351,14 +382,14 @@ nav ul li a:hover {
 
 .instagram-button {
     padding: 8px 16px;
-    background-color: #7E7F52;
+    background-color: var(--third-color);
     color: white;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .instagram-button:hover {
-    background-color: #D1DCD8;
+    background-color: var(--secondary-color);
     color: black;
 }
 
@@ -370,7 +401,7 @@ nav ul li a:hover {
     align-content: center;
     flex-direction: column;
     padding: 50px 10px;
-    background-color: #44442C;
+    background-color: var(--primary-color);
     color:white;
     position: relative;
     overflow-y: hidden;
@@ -433,14 +464,14 @@ nav ul li a:hover {
 .location-button {
     margin-top: 50px;
     padding: 8px 16px;
-    background-color: #7E7F52;
+    background-color: var(--third-color);
     color: white;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .location-button:hover {
-    background-color: #D1DCD8;
+    background-color: var(--secondary-color);
     color: black;
 }
 
@@ -486,12 +517,12 @@ nav ul li a:hover {
 
 /* General section styling */
 #section7 {
-    background-color: #44442C;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 0;
     margin: 0;
-    height: 100vh;
+    height: auto;
 }
 
 #section7 h2 {
@@ -521,13 +552,13 @@ nav ul li a:hover {
 }
 
 #messageForm button {
-    font-family: "Old Standard TT", serif;
+    font-family: var(--secondary-font);
     font-weight: 400;
     font-style: normal;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
     font-size: 16px;
-    background-color:#7E7F52;
+    background-color:var(--third-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -536,7 +567,7 @@ nav ul li a:hover {
 }
 
 #messageForm button:hover {
-    background-color: #D1DCD8;
+    background-color: var(--secondary-color);
     color: black;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -568,8 +599,9 @@ nav ul li a:hover {
 }
 
 .message .message-author {
-    font-size: 18px;
-    font-weight: bold;
+    font-family: var(--primary-font);
+    font-size: 24px;
+    font-weight: 400;
     margin-bottom: 5px;
     text-decoration: underline;
 }
@@ -577,7 +609,6 @@ nav ul li a:hover {
 .message .message-body {
     margin-top: 10px;
 }
-
 
 /* CSS untuk mengganti font placeholder */
 #formGuestName::placeholder,
@@ -600,7 +631,7 @@ nav ul li a:hover {
 
 /* ...........SECTION 8............. */
 #section8 {
-    font-family: "Old Standard TT", serif;
+    font-family: var(--secondary-font);
     font-weight: 400;
     font-style: normal;
     background-image: url('background2.jpeg'); /* Mobile background image */
@@ -617,6 +648,24 @@ nav ul li a:hover {
     gap: 50px;
     padding: 30px;
     overflow-y: hidden;
+}
+
+#section8 h2 {
+    position: relative;
+    z-index: 2;
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.2em;
+}
+
+#section8 p {
+    position: relative;
+    z-index: 2;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
 }
 
 .bank-container {
@@ -658,7 +707,7 @@ nav ul li a:hover {
 
 button {
     padding: 10px 20px;
-    background-color: #7E7F52;
+    background-color: var(--third-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -667,7 +716,7 @@ button {
 }
 
 button:hover {
-    background-color: #D1DCD8;
+    background-color: var(--secondary-color);
     color: black;
 }
 
@@ -684,7 +733,7 @@ button:hover {
     height: 100vh;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     text-align: center;
-    background-color: #44442C;
+    background-color: var(--primary-color);
     color: white;
     margin: 0;
     padding: 50px 20px;
@@ -706,44 +755,36 @@ button:hover {
 .thank-you h2 {
     position: relative;
     z-index: 2;
-    font-family: "Updock", cursive;
+    font-family: var(--primary-font);
     font-weight: 700;
     font-style: normal;
     font-size: 3.2em;
-    margin-bottom: 60px;
-    color: black;
+    margin-bottom: 10px;
+    color: white;
 }
 
 .thank-you p {
     position: relative;
     z-index: 2;
-    font-family: "Old Standard TT", serif;
+    font-family: var(--secondary-font);
     font-weight: 400;
     font-style: normal;
     font-size: 1em;
 }
 
-#section8 h2 {
+.name-decor {
     position: relative;
     z-index: 2;
-    font-family: "Updock", cursive;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 3.2em;
+    width: 250px; /* Sesuaikan ukuran foto */
+    height: auto;
+    object-fit: cover;
+    margin: 0 0 20px 0;
 }
 
-#section8 p {
-    position: relative;
-    z-index: 2;
-    font-family: "Old Standard TT", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1em;
-}
 
 /* Footer */
 footer {
-    background-color: #f4f4f4;
+    background-color: white;
     padding-bottom: 50px;
     padding-top: 15px;
 }
@@ -764,16 +805,16 @@ footer {
     display: flex;
 }
   
-  .social-icon {
-    color: var(--secondary-color); /* Warna ikon */
+.social-icon {
+    color: var(--primary-color); /* Warna ikon */
     font-size: 24px; /* Ukuran ikon */
     margin-left: 15px; /* Jarak antar ikon */
     text-decoration: none; /* Menghilangkan garis bawah */
-  }
+}
   
-  .social-icon:hover {
-    color: var(--primary-color); /* Warna saat hover */
-  }
+.social-icon:hover {
+    color: var(--secondary-color); /* Warna saat hover */
+}
 
 
 /* ...............  ANIMATION............... */
@@ -938,14 +979,6 @@ footer {
     button {
         font-size: 1em;
         padding: 8px 16px;
-    }
-    /* .........FLOWER CONTROL......... */
-
-    .flowers1 {
-        width: 110px; /* Adjust size as needed */
-    }
-    .flowers2 {
-        width: 110px; /* Adjust size as needed */
     }
 
     /* SECTION1 */
